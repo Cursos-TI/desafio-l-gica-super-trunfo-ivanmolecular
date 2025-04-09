@@ -7,15 +7,9 @@
 int main(){
     char estado1, codigo_da_carta1[50], nome_da_cidade1[50], estado2, codigo_da_carta2[50], nome_da_cidade2[50];
 	int populacao1, pontos_turisticos1, populacao2, pontos_turisticos2;
-    float area_km1, pib1, area_km2, pib2;
-    float den_pop1, renda_capita1, den_pop2, renda_capita2;
-        
-    /*Criado mais int e float para nao estourar os dados em tela*/
-    int populacao_resultado, pontos_turisticos_resultado;
-	float area_resultado, pib_resultado, pib_per_capita_resultado, den_pop_resultado;
-	float den_pop_invertida1, den_pop_invertida2, renda_per_capita_resultado;
-	float super_poder_carta1, super_poder_carta2, super_poder_master;
-    
+    float area_km1, pib1, area_km2, pib2, den_pop1, renda_capita1, den_pop2, renda_capita2;
+    float den_pop_invertida1, den_pop_invertida2, super_poder_carta1, super_poder_carta2;
+	   
 	//================
 	//========Abaixo, inicio do codigo para primeira carta.
 	//================
