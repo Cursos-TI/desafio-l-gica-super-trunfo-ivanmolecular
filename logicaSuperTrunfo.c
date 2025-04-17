@@ -1,300 +1,230 @@
 #include <stdio.h>
 
-//Inicia o codigo
+//Aqui estao as variaveis, algumas com inicializacao
+int main () {
+    int escolha_opcao_menu = 0, escolha_opcao_submenu = 0;
+    int carta_pc = 0;
+    int valor_jogador, valor_computador;
+    double densidade_jogador, densidade_computador;
 
-/*Cada variavel esta representado por um numero ao final para cada uma das cartas,
-    como exemplo carta1 , estado1 - carta2 , estado2, e assim por diante.*/
-int main(){
-    char estado1, codigo_da_carta1[50], nome_da_cidade1[50], estado2, codigo_da_carta2[50], nome_da_cidade2[50];
-	int populacao1, pontos_turisticos1, populacao2, pontos_turisticos2;
-    float area_km1, pib1, area_km2, pib2, den_pop1, renda_capita1, den_pop2, renda_capita2;
-    float den_pop_invertida1, den_pop_invertida2, super_poder_carta1, super_poder_carta2;
-	   
-	//================
-	//========Abaixo, inicio do codigo para primeira carta.
-	//================
-	
-    //Imprime nome da primeira carta
-    printf("\n_____Insira os dados da primeira carta: \n");
-    
-	//Imprime o pedido de estado da primeira carta
-    printf("Estado(Apenas uma letra): \n");
-   
-    //Abre o pedido de insercao do estado da primeira carta
-    scanf(" %c", &estado1);
-   
-    //Imprime o pedido de codigo da primeira carta
-    printf("Codigo: \n");
-    
-	//Abre o pedido de insercao do codigo da primeira carta
-    scanf("%s", codigo_da_carta1);
-  
-    //Imprime o pedido de cidade da primeira carta
-    printf("Nome da cidade(apenas uma palavra): \n");
-   
-    //Abre o pedido de insercao do cidade da primeira carta
-    scanf("%s", nome_da_cidade1);
-   
-    //Imprime o pedido de cidade da primeira carta
-    printf("Populacao: \n");
-    
-	//Abre o pedido de insercao do polulacao da primeira carta
-    scanf("%d", &populacao1);
-   
-    //Imprime o pedido de area da primeira carta
-    printf("area: \n");
-   
-    //Abre o pedido de insercao de area da primeira carta
-    scanf("%f", &area_km1);
-   
-    //Imprime o pedido de pib da primeira carta
-    printf("PIB: \n");
-   
-    //Abre o pedido de insercao do pib da primeira carta
-    scanf("%f", &pib1);
-    
-	//Imprime o pedido de numeros de pontos turisticos da primeira carta
-    printf("Numero de pontos turisticos: \n");
-    
-	//Abre o pedido de insercao do numeros de pontos turisticos da primeira carta
-    scanf("%d", &pontos_turisticos1);
-    
-    //Fim do questionario da primeira carta.
-    
-    
-    //---->Inicia as contagens
-    
-    //Gera a conta de densidade populacional primeira carta - quociente entre populacao / area
-    den_pop1 = populacao1 / area_km1;
-    
-   	//Conta para inverter a densidade populacional
-	den_pop_invertida1 = (1 / den_pop1);
-	
-	//Gera a conta de renda per capita primeira carta - quociente entre pib / populacao
-    renda_capita1 = pib1 / populacao1;
-	
-	//---->Finaliza as contagens
-	
-    
-    //================
-    //========Abaixo, inicio do codigo para segunda carta.
-	//================
-	
-	//Imprime nome da segunda carta
-    printf("\n_____Insira os dados da segunda carta: \n");
-    
-	//Imprime o pedido de estado da segunda carta
-    printf("Estado(Apenas uma letra): \n");
-    
-	//Abre o pedido de insercao do estado da segunda carta
-    scanf(" %c", &estado2);
-    
-	//Imprime o pedido de codigo da segunda carta
-    printf("Codigo: \n");
-    
-	//Abre o pedido de insercao do codigo da segunda carta
-    scanf("%s", codigo_da_carta2);
-	
-	//Imprime o pedido de cidade da segunda carta
-    printf("Nome da cidade(apenas uma palavra): \n");
-    
-	//Abre o pedido de insercao do cidade da segunda carta
-    scanf("%s", nome_da_cidade2);
-    
-	//Imprime o pedido de populacao da segunda carta
-    printf("Populacao: \n");
-    
-	//Abre o pedido de insercao do polulacao da segunda carta
-    scanf("%d", &populacao2);
-    
-	//Imprime o pedido de area da segunda carta
-    printf("area: \n");
-    
-	//Abre o pedido de insercao de area da segunda carta
-    scanf("%f", &area_km2);
-    
-	//Imprime o pedido de pib da segunda carta
-    printf("PIB: \n");
-    
-	//Abre o pedido de insercao do pib da segunda carta
-    scanf("%f", &pib2);
-    
-	//Imprime o pedido de numeros de pontos turisticos da segunda carta
-    printf("Numero de pontos turisticos: \n");
-    
-    //Abre o pedido de insercao do numeros de pontos turisticos da segunda carta
-    scanf("%d", &pontos_turisticos2);
-    
-    //Fim do questionario da segunda carta.
-    
-    
-    //---->Inicia as contagens
-    
-    //Gera a conta de densidade populacional segunda carta - quociente entre populacao / area
-    den_pop2 = populacao2 / area_km2;
-    
-   	//Conta para inverter a densidade populacional
-	den_pop_invertida2 = (1 / den_pop2);
-	
-	//Gera a conta de renda per capita primeira carta - quociente entre pib / populacao
-    renda_capita2 = pib2 / populacao2;
-	
-	//---->Finaliza as contagens
-    
-	
-	//================	
-	//========Inicio do retorno dos dados da primeira carta.
-	//================
-	
-	//Imprime nome da primeira carta.
-    printf("\n_____Dados da Primeira carta: \n");
-	
-	//Imprime estado da primeira carta.
-    printf("Estado: %c\n", estado1);
-	
-	//Imprime codigo da primeira carta.
-    printf("Codigo: %s\n", codigo_da_carta1);
-	
-	//Imprime cidade da primeira carta.
-    printf("Cidade: %s\n", nome_da_cidade1);  
-	
-	//Imprime populacao da primeira carta.
-    printf("Populacao: %d\n", populacao1);
-	
-	//Imprime area da primeira carta.
-    printf("Area: %.2f\n", area_km1);
-	
-	//Imprime pib da primeira carta.
-    printf("PIB: %.2f\n", pib1);
-    
-	//Imprime ponto turistico da primeira carta.
-    printf("Pontos turisticos: %d\n", pontos_turisticos1);
-    
-    //Imprime densidade populacional primeira carta   
-    printf("Densidade populacional: %.2f\n", den_pop_invertida1);
-    
-	//Renda per capita primeira carta
-	printf("Renda per capita: %.2f\n", renda_capita1);
-	
-	//Fim das respostas da primeira carta.
+    printf("### Jogo Super Trunfo Cidades ###\n");
+    printf("--- Escolha uma carta: \n");
+    printf("1. Carta 1 - Belo Horizonte\n");
+    printf("2. Carta 2 - Amazonas\n");
+    printf("---------- Escolha uma opcao: ");
+    scanf("%d", &escolha_opcao_menu);
 
-	//================
-	//========Inicio do retorno dos dados da segunda carta.
-	//================
-	
-	//Imprime nome da segunda carta.
-    printf("\n_____Dados da Segunda carta: \n");
-	
-	//Imprime estado da segunda carta.
-    printf("Estado: %c\n", estado2);
-	
-	//Imprime codigo da segunda carta.
-    printf("Codigo: %s\n", codigo_da_carta2);
+    // Aqui e a escolha das cartas, caso o primeiro jogador escolher a carta 1
+    // O computador escolhera a carta dois, ou vise versa
+    if (escolha_opcao_menu == 1) {
+        carta_pc = 2;
+    } else {
+        carta_pc = 1;
+    }
 
-	//Imprime cidade da segunda carta.
-    printf("Cidade: %s\n", nome_da_cidade2);  
+    // Informacoes sobre as cartas
+    // Visualizacao dos atributos da carta 1 e carta 2
+    switch (escolha_opcao_menu) {
+        case 1:
+            printf("\nCarta Jogador 1:\n");
+            printf("Cidade: Belo Horizonte\n");
+            printf("1. Populacao = 2140000\n");
+            printf("2. Area em km = 105500000\n");
+            printf("3. PIB = 564000000\n");
+            printf("4. Numero de pontos turisticos = 50\n");
+            printf("5. Densidade demografica = 0.0000493\n");
+            break;
+        case 2:
+            printf("\nCarta Jogador 1:\n");
+            printf("Cidade: Amazonas\n");
+            printf("1. Populacao = 3800000\n");
+            printf("2. Area em km = 150000000\n");
+            printf("3. PIB = 813000000\n");
+            printf("4. Numero de pontos turisticos = 75\n");
+            printf("5. Densidade demografica = 0.0000395\n");
+            break;
+        default:
+            printf("Opcao invalida!\n");
+            return 1;
+    }
 
-	//Imprime populacao da segunda carta.
-    printf("Populacao: %d\n", populacao2);
+    printf("Escolha um atributo: ");
+    scanf("%d", &escolha_opcao_submenu);
 
-	//Imprime area da segunda carta.
-    printf("Area: %.2f\n", area_km2);
+    // Atributos do jogador 1
+    switch (escolha_opcao_menu) {
+        case 1:
+            switch (escolha_opcao_submenu) {
+                case 1: valor_jogador = 2140000; 
+                break;
+                case 2: valor_jogador = 105500000; 
+                break;
+                case 3: valor_jogador = 564000000; 
+                break;
+                case 4: valor_jogador = 50; 
+                break;
+                case 5: densidade_jogador = 0.0000493; 
+                break;
+                default: 
+                    printf("Atributo invalido!\n");
+                    return 1;
+            }
+            break;
+        case 2:
+            switch (escolha_opcao_submenu) {
+                case 1: valor_jogador = 3800000; 
+                break;
+                case 2: valor_jogador = 150000000; 
+                break;
+                case 3: valor_jogador = 813000000; 
+                break;
+                case 4: valor_jogador = 75; 
+                break;
+                case 5: densidade_jogador = 0.0000395; 
+                break;
+                default: 
+                    printf("Atributo invalido!\n");
+                    return 1;
+            }
+            break;
+    }
 
-	//Imprime pib da segunda carta.
-    printf("PIB: %.2f\n", pib2);
-   
-    //Imprime ponto turistico da segunda carta.
-    printf("Pontos turisticos: %d\n", pontos_turisticos2);
-	
-	//Imprime densidade populacional segunda carta     
-    printf("Densidade populacional: %.2f\n", den_pop_invertida2);
+    // Atributos do computador
+    switch (carta_pc) {
+        case 1:
+            switch (escolha_opcao_submenu) {
+                case 1: valor_computador = 2140000; break;
+                case 2: valor_computador = 105500000; break;
+                case 3: valor_computador = 564000000; break;
+                case 4: valor_computador = 50; break;
+                case 5: densidade_computador = 0.0000493; break; 
+            }
+            break;
+        case 2:
+            switch (escolha_opcao_submenu) {
+                case 1: valor_computador = 3800000; break;
+                case 2: valor_computador = 150000000; break;
+                case 3: valor_computador = 813000000; break;
+                case 4: valor_computador = 75; break;
+                case 5: densidade_computador = 0.0000395; break;  
+            }
+            break;
+    }
 
-	//Renda per capita segunda carta
-	printf("Renda per capita: %.2f\n", renda_capita2);
-	
-	//==================Fim das respostas da segunda carta.
-  
-  
-  	//===========Super poder
-	
-	//Soma da primeira carta
-	super_poder_carta1 = populacao1 + pontos_turisticos1 + area_km1 + pib1 + renda_capita1 + den_pop_invertida1;
-	
-	//Soma da segunda carta
-	super_poder_carta2 = populacao2 + pontos_turisticos2 + area_km2 + pib2 + renda_capita2 + den_pop_invertida2; 
-  
-  
-   	//================
-	//========Inicio da comparacao entre as duas cartas.
-	//================
-	
-	//Compara a populacao da primeira carta com a segunda
-	//Logo gera a carta vencedora, primeira ou segunda
-	if (populacao1 > populacao2){
-		printf("\nPrimeira carta venceu em populacao!\n");
-		printf("Pontuacao vencedora: %d\n", populacao1);
-	}else{
-		printf("\nSegunda carta venceu em populacao!\n");
-		printf("Pontuacao vencedora: %d\n", populacao2);
-	}
-	//Compara a area em quilometros da primeira carta com a segunda
-	//Logo gera a carta vencedora, primeira ou segunda
-	if (area_km1 > area_km2){
-		printf("\nPrimeira carta venceu em area!\n");
-		printf("Pontuacao vencedora: %.2f\n", area_km1);
-	}else{
-		printf("\nSegunda carta venceu em area!\n");
-		printf("Pontuacao vencedora: %.2f\n", area_km2);
-	}
-	//Compara o pib da primeira carta com a segunda
-	//Logo gera a carta vencedora, primeira ou segunda
-	if (pib1 > pib2){
-		printf("\nPrimeira carta venceu em pib!\n");
-		printf("Pontuacao vencedora: %.2f\n", pib1);
-	}else{
-		printf("\nSegunda carta venceu em pib!\n");
-		printf("Pontuacao vencedora: %.2f\n", pib2);
-	}
-	//Compara a quantidade de pontos turisticos da primeira carta com a segunda
-	//Logo gera a carta vencedora, primeira ou segunda
-	if (pontos_turisticos1 > pontos_turisticos2){
-		printf("\nPrimeira carta venceu em pontos turisticos!\n");
-		printf("Pontuacao vencedora: %d\n", pontos_turisticos1);
-	}else{
-		printf("\nSegunda carta venceu em pontos turisticos!\n");
-		printf("Pontuacao vencedora: %d\n", pontos_turisticos2);
-	}
-	//Compara a menor densidade populacional da primeira carta com a segunda
-	//Logo gera a carta vencedora, primeira ou segunda
-	if (den_pop_invertida1 < den_pop_invertida2){
-		printf("\nPrimeira carta venceu em menor densidade populacional!\n");
-		printf("Pontuacao vencedora: %.2f\n", den_pop_invertida1);
-	}else{
-		printf("\nSegunda carta venceu em menor densidade populacional!\n");
-		printf("Pontuacao vencedora: %.2f\n", den_pop_invertida2);
-	}
-	//Compara a renda per capita da primeira carta com a segunda
-	//Logo gera a carta vencedora, primeira ou segunda
-	if (renda_capita1 > renda_capita2){
-		printf("\nPrimeira carta venceu em renda per capita!\n");
-		printf("Pontuacao vencedora: %.2f\n", renda_capita1);
-	}else{
-		printf("\nSegunda carta venceu em renda per capita!\n");
-		printf("Pontuacao vencedora: %.2f\n", renda_capita2);
-	}
-	//Compara o super poder da primeira carta com a segunda
-	//Logo gera a carta vencedora, primeira ou segunda
-	if (super_poder_carta1 > super_poder_carta2){
-		printf("\nPrimeira carta venceu em super poder!\n");
-		printf("Pontuacao vencedora: %.0f\n", super_poder_carta1);
-	}else{
-		printf("\nSegunda carta venceu em super poder!\n");
-		printf("Pontuacao vencedora: %.0f\n", super_poder_carta2);
-	}
-	
-	
-   //Finaliza o codigo
-   return 0;
-   
-     
+    // Aqui faz a comparacao e exibe os resultados
+    printf("\nResultado: \n");
+
+    if (escolha_opcao_submenu == 1) {  // Populacao
+        if (valor_jogador > valor_computador) {
+            printf("Vencedor: Jogador 1\n");
+            printf("Cidade vencedora: ");
+            if (escolha_opcao_menu == 1) {
+                printf("Belo Horizonte\n");
+            } else {
+                printf("Amazonas\n");
+            }
+            printf("Atributo utilizado: Populacao\n");
+            printf("Valor da comparação: %d vs %d\n", valor_jogador, valor_computador);
+        } else {
+            printf("Vencedor: Computador\n");
+            printf("Cidade vencedora: ");
+            if (carta_pc == 1) {
+                printf("Belo Horizonte\n");
+            } else {
+                printf("Amazonas\n");
+            }
+            printf("Atributo utilizado: Populacao\n");
+            printf("Valor da comparação: %d vs %d\n", valor_jogador, valor_computador);
+        }
+    } else if (escolha_opcao_submenu == 2) {  // Area em km
+        if (valor_jogador > valor_computador) {
+            printf("Vencedor: Jogador 1\n");
+            printf("Cidade vencedora: ");
+            if (escolha_opcao_menu == 1) {
+                printf("Belo Horizonte\n");
+            } else {
+                printf("Amazonas\n");
+            }
+            printf("Atributo utilizado: Area em km\n");
+            printf("Valor da comparação: %d vs %d\n", valor_jogador, valor_computador);
+        } else {
+            printf("Vencedor: Computador\n");
+            printf("Cidade vencedora: ");
+            if (carta_pc == 1) {
+                printf("Belo Horizonte\n");
+            } else {
+                printf("Amazonas\n");
+            }
+            printf("Atributo utilizado: Area em km\n");
+            printf("Valor da comparação: %d vs %d\n", valor_jogador, valor_computador);
+        }
+    } else if (escolha_opcao_submenu == 3) {  // PIB
+        if (valor_jogador > valor_computador) {
+            printf("Vencedor: Jogador 1\n");
+            printf("Cidade vencedora: ");
+            if (escolha_opcao_menu == 1) {
+                printf("Belo Horizonte\n");
+            } else {
+                printf("Amazonas\n");
+            }
+            printf("Atributo utilizado: PIB\n");
+            printf("Valor da comparação: %d vs %d\n", valor_jogador, valor_computador);
+        } else {
+            printf("Vencedor: Computador\n");
+            printf("Cidade vencedora: ");
+            if (carta_pc == 1) {
+                printf("Belo Horizonte\n");
+            } else {
+                printf("Amazonas\n");
+            }
+            printf("Atributo utilizado: PIB\n");
+            printf("Valor da comparação: %d vs %d\n", valor_jogador, valor_computador);
+        }
+    } else if (escolha_opcao_submenu == 4) {  // Numero de pontos turisticos
+        if (valor_jogador > valor_computador) {
+            printf("Vencedor: Jogador 1\n");
+            printf("Cidade vencedora: ");
+            if (escolha_opcao_menu == 1) {
+                printf("Belo Horizonte\n");
+            } else {
+                printf("Amazonas\n");
+            }
+            printf("Atributo utilizado: Numero de pontos turisticos\n");
+            printf("Valor da comparação: %d vs %d\n", valor_jogador, valor_computador);
+        } else {
+            printf("Vencedor: Computador\n");
+            printf("Cidade vencedora: ");
+            if (carta_pc == 1) {
+                printf("Belo Horizonte\n");
+            } else {
+                printf("Amazonas\n");
+            }
+            printf("Atributo utilizado: Numero de pontos turisticos\n");
+            printf("Valor da comparação: %d vs %d\n", valor_jogador, valor_computador);
+        }
+    } else if (escolha_opcao_submenu == 5) {  // Densidade demografica
+        if (densidade_jogador < densidade_computador) {
+            printf("Vencedor: Jogador 1\n");
+            printf("Cidade vencedora: ");
+            if (escolha_opcao_menu == 1) {
+                printf("Belo Horizonte\n");
+            } else {
+                printf("Amazonas\n");
+            }
+            printf("Atributo utilizado: Densidade demografica\n");
+            printf("Valor da comparação: %.7f vs %.7f\n", densidade_jogador, densidade_computador);
+        } else {
+            printf("Vencedor: Computador\n");
+            printf("Cidade vencedora: ");
+            if (carta_pc == 1) {
+                printf("Belo Horizonte\n");
+            } else {
+                printf("Amazonas\n");
+            }
+            printf("Atributo utilizado: Densidade demografica\n");
+            printf("Valor da comparação: %.7f vs %.7f\n", densidade_jogador, densidade_computador);
+        }
+    }
+
+    return 0;
 }
